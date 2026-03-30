@@ -1047,3 +1047,349 @@ a {
     display: none;
   }
 }
+
+
+/* ===== Mobile landing page ===== */
+.mobile-home-body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 193, 92, 0.54), transparent 36%),
+    radial-gradient(circle at 92% 10%, rgba(255, 141, 45, 0.22), transparent 24%),
+    linear-gradient(180deg, #fff8ef 0%, #fff2dd 48%, #ffe5be 100%);
+}
+
+.mobile-home {
+  width: min(100%, 480px);
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) 16px calc(env(safe-area-inset-bottom, 0px) + 92px);
+}
+
+.mobile-topbar {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 248, 239, 0.84);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 30px rgba(113, 67, 21, 0.08);
+}
+
+.mobile-topbar strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.1rem;
+}
+
+.mobile-hero,
+.mobile-section {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-hero {
+  display: grid;
+  gap: 16px;
+}
+
+.mobile-hero-copy,
+.mobile-hero-card,
+.mobile-info-card,
+.mobile-product-card,
+.mobile-event-card,
+.mobile-contact-card,
+.mobile-section-heading {
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(90, 44, 9, 0.1);
+  background: rgba(255, 251, 246, 0.92);
+  box-shadow: 0 18px 40px rgba(124, 68, 15, 0.08);
+}
+
+.mobile-hero-copy h1,
+.mobile-section-heading h2 {
+  margin: 12px 0 12px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.mobile-hero-copy h1 {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  line-height: 1.02;
+}
+
+.mobile-hero-copy p,
+.mobile-section-heading p,
+.mobile-info-card p,
+.mobile-product-card p,
+.mobile-event-card p,
+.mobile-contact-card span,
+.mobile-hero-copyline p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.mobile-hero-card {
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 246, 0.98), rgba(255, 233, 203, 0.88)),
+    rgba(255, 252, 248, 0.96);
+}
+
+.mobile-hero-copyline {
+  display: grid;
+  gap: 8px;
+}
+
+.mobile-hero-copyline span,
+.mobile-event-card span {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--orange-deep);
+}
+
+.mobile-hero-copyline strong {
+  font-size: 1.25rem;
+}
+
+.mobile-hero-card img {
+  width: min(100%, 280px);
+  margin: 18px auto 0;
+}
+
+.mobile-chip-row,
+.mobile-cta-row,
+.mobile-stack,
+.mobile-product-list {
+  display: grid;
+  gap: 12px;
+}
+
+.mobile-chip-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mobile-chip-row span {
+  padding: 12px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(105, 60, 17, 0.08);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--orange-deep);
+}
+
+.mobile-cta-row .button {
+  width: 100%;
+}
+
+.mobile-section {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.mobile-info-card h3,
+.mobile-product-card h3,
+.mobile-event-card h3 {
+  margin: 12px 0 10px;
+  font-size: 1.18rem;
+}
+
+.mobile-product-top {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-product-card li {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(105, 60, 17, 0.08);
+}
+
+.mobile-product-card li strong,
+.mobile-contact-card strong {
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+}
+
+.mobile-contact-card {
+  display: grid;
+  gap: 12px;
+}
+
+.mobile-contact-card a,
+.mobile-contact-card div {
+  display: grid;
+  gap: 6px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(105, 60, 17, 0.08);
+}
+
+.mobile-contact-card a:last-child,
+.mobile-contact-card div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mobile-contact-card a:first-child,
+.mobile-contact-card div:first-child {
+  padding-top: 0;
+}
+
+.mobile-bottom-bar {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  z-index: 20;
+  transform: translateX(-50%);
+  width: min(calc(100% - 24px), 450px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(38, 71, 52, 0.94);
+  box-shadow: 0 18px 50px rgba(35, 23, 12, 0.25);
+}
+
+.mobile-bottom-bar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 8px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 250, 244, 0.96);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    position: static;
+  }
+
+  .hero {
+    gap: 18px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero-text {
+    max-width: none;
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .hero-copy .eyebrow,
+  .section-heading .eyebrow,
+  .spotlight-top {
+    gap: 8px;
+  }
+
+  .photo-stage {
+    padding: 22px 18px 20px;
+  }
+
+  .product-list-wrap,
+  .product-spotlight,
+  .contact-card {
+    padding: 20px;
+  }
+
+  .mobile-chip-row {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-bottom-bar {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.mobile-fallback-switch {
+  display: none;
+}
+
+.desktop-page-mobile-bar {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .mobile-fallback-switch {
+    width: min(calc(100% - 32px), var(--max-width));
+    margin: 14px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .topbar {
+    top: 0;
+    margin-top: 10px;
+  }
+
+  .topnav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topnav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  .hero.section {
+    padding-top: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.04;
+  }
+
+  .section-heading h2,
+  .contact-copy h2,
+  .signature-copy h2,
+  .strategy-copy h2 {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    line-height: 1.08;
+  }
+
+  .desktop-page-mobile-bar {
+    display: grid;
+  }
+}
